@@ -1,0 +1,11 @@
+body {
+  background: black;
+  color: white;
+}
+div {
+  text-align: center;
+  font-family: monospace, monospace;
+}
+h1 {
+  cursor: pointer;
+}

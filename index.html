@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>www.bridgesyndicate.gg</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function () {
+      var url = window.location.href;
+      var parts = url.split('?');
+      $("#myKickCode").html(parts[1]);
+      $("#verify").click(function(){
+	var $temp = $("<input>");
+	$("body").append($temp);
+	$temp.val($(this).text()).select();
+	document.execCommand("copy");
+	$temp.remove();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div>
+    <h4>Click kick code to copy</h4>
+    <h1 id="verify">/verify <span id="myKickCode"/></h1>
+  </div>
+</body>
+</html>
